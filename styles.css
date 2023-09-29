@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 14px;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.header {
+  background: url("./images/header/background.png");
+}
+
+a {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00bf78;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  /* border: 4px double black; */
+}
+
+/* navigation-block */
+
+.navigation-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* logo */
+
+.header_logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* navigation link  */
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+  gap: 0 28px;
+}
+
+.navigation-link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* header-contact */
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-number {
+  font-size: 18px;
+  font-weight: 500;
+  gap: 8px 0;
+}
+
+.contact-description {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* header-content */
+
+.header-content {
+  /* border: 4px double rgb(184, 61, 61); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 525px;
+  position: relative;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  gap: 16px 0;
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.header-desc {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header-btn {
+  background-color: #fb9475;
+  color: white;
+  width: fit-content;
+  padding: 17px 30px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.header-btn:hover {
+  opacity: 0.8;
+}
+
+.header-image {
+  bottom: 0;
+  right: 80px;
+  /* width: 500px;
+  height: 500px; */
+  /* border: 4px double rgb(61, 63, 184); */
+  position: absolute;
+}
+
+.header-image img {
+  width: 524px;
+  height: 510px;
+}
+
+.social-icons {
+  /* border: 4px double rgb(184, 61, 180); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 0;
+}
+.social-icons img {
+  cursor: pointer;
+}
+
+.page__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.footer-desc {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-desc-link {
+  color: var(--Link, #278aff);
+  font-size: 12px;
+  font-weight: 400;
+}
+.footer-desc-link:hover {
+  color: var(--Link, #000000);
+}
