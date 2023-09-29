@@ -36,7 +36,6 @@ a:hover {
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  /* border: 4px double black; */
 }
 
 /* navigation-block */
@@ -90,12 +89,10 @@ a:hover {
 /* header-content */
 
 .header-content {
-  /* border: 4px double rgb(184, 61, 61); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 525px;
-  position: relative;
 }
 
 .header-main {
@@ -124,36 +121,57 @@ a:hover {
   border-radius: 24px;
   cursor: pointer;
   margin-top: 40px;
+  transition: 1s;
 }
 
 .header-btn:hover {
   opacity: 0.8;
+  transform: scale(1.05);
 }
+
+/* header-image */
 
 .header-image {
-  bottom: 0;
-  right: 80px;
-  /* width: 500px;
-  height: 500px; */
-  /* border: 4px double rgb(61, 63, 184); */
-  position: absolute;
-}
-
-.header-image img {
   width: 524px;
   height: 510px;
+  position: relative;
 }
 
+.imagegroup {
+  position: absolute;
+  margin-left: -50px;
+  margin-top: 7px;
+}
+
+.header-image:hover:before {
+  transform: scale(1.05);
+}
+
+.header-image::before {
+  content: "";
+  background-image: url("./images/header/girlBG.png");
+  background-repeat: no-repeat;
+  width: 472px;
+  height: 400px;
+  position: absolute;
+  margin-top: 120px;
+  transition: 1s;
+}
+
+/* header-icons */
+
 .social-icons {
-  /* border: 4px double rgb(184, 61, 180); */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px 0;
 }
-.social-icons img {
+.social-icons > img:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
+
+/* footer */
 
 .page__footer {
   display: flex;
@@ -161,7 +179,7 @@ a:hover {
   align-items: center;
   max-width: 1110px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .footer-desc {
