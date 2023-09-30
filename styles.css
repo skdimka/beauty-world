@@ -19,10 +19,6 @@ p {
   margin: 0;
 }
 
-.header {
-  background: url("./images/header/background.png");
-}
-
 a {
   color: #333;
   font-weight: 700;
@@ -33,14 +29,20 @@ a:hover {
   color: #00bf78;
 }
 
-.container {
+/* header */
+
+.header {
+  background: url("./images/header/background.png");
+}
+
+.container__header {
   max-width: 1110px;
   margin: 0 auto;
 }
 
 /* navigation-block */
 
-.navigation-block {
+.navigation__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,70 +51,82 @@ a:hover {
 
 /* logo */
 
-.header_logo {
+.header__logo {
   font-size: 24px;
   font-weight: 700;
+  transition: 1s;
+}
+.header__logo:hover {
+  transform: scale(1.03);
 }
 
 /* navigation link  */
 
-.navigation-list {
+.navigation__list {
   display: flex;
   list-style: none;
   gap: 0 28px;
 }
 
-.navigation-link {
+.navigation__link {
   font-size: 14px;
   font-weight: 500;
 }
 
+.navigation__item:hover {
+  transform: scale(1.01);
+}
+
 /* header-contact */
 
-.header-contact {
+.header__contact {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.contact-number {
+.contact__number {
   font-size: 18px;
   font-weight: 500;
   gap: 8px 0;
 }
 
-.contact-description {
+.contact__description {
   font-size: 11px;
   font-weight: 400;
 }
 
 /* header-content */
 
-.header-content {
+.header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 525px;
 }
 
-.header-main {
+.header__main {
   display: flex;
   flex-direction: column;
   width: 540px;
   gap: 16px 0;
+  transition: 1s;
+}
+.header__main:hover {
+  transform: scale(1.01);
 }
 
-.header-title {
+.header__title {
   font-size: 48px;
   font-weight: 600;
 }
 
-.header-desc {
+.header__desc {
   font-size: 20px;
   font-weight: 400;
 }
 
-.header-btn {
+.header__btn {
   background-color: #fb9475;
   color: white;
   width: fit-content;
@@ -124,30 +138,31 @@ a:hover {
   transition: 1s;
 }
 
-.header-btn:hover {
+.header__btn:hover {
   opacity: 0.8;
   transform: scale(1.05);
 }
 
 /* header-image */
 
-.header-image {
+.header__image {
   width: 524px;
   height: 510px;
   position: relative;
 }
 
-.imagegroup {
+.image__girl {
   position: absolute;
   margin-left: -50px;
   margin-top: 7px;
 }
 
-.header-image:hover:before {
+.header__image:hover:before {
   transform: scale(1.05);
+  opacity: 0.85;
 }
 
-.header-image::before {
+.header__image::before {
   content: "";
   background-image: url("./images/header/girlBG.png");
   background-repeat: no-repeat;
@@ -160,117 +175,99 @@ a:hover {
 
 /* header-icons */
 
-.social-icons {
+.social__icons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px 0;
 }
-.social-icons > img:hover {
+.social__icons > img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-/* footer */
+/* section */
 
-.page__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
-.footer-desc {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.footer-desc-link {
-  color: var(--Link, #278aff);
-  font-size: 12px;
-  font-weight: 400;
-}
-.footer-desc-link:hover {
-  color: var(--Link, #000000);
-}
-
-/* container2 */
-
-.container2 {
+.section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1110px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
-.container2-content {
+.section__content {
   display: flex;
 }
 
-.container2-main {
+.section__main {
   display: flex;
   flex-direction: column;
-  width: 580px;
+  width: 550px;
 }
 
-.container2-title {
+.section__title {
   font-size: 48px;
   font-weight: 700;
 }
 
-.container2-desc {
+.section__desc {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
   margin-top: 20px;
 }
 
-.container2-p {
+.section__p {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   margin-top: 20px;
 }
 
-.container2-image {
-  width: 524px;
-  height: 510px;
+/* section image */
+
+.section__image {
   position: relative;
+  width: 450px;
+  height: 300px;
+  margin-top: 95px;
 }
 
-.imagegroup2 {
+.image__salon {
   position: absolute;
-  margin-top: 155px;
-  margin-left: 80px;
 }
 
-.container2-image::after {
+.section__image::after {
   content: "Короткое видео о нас";
-  background-image: url("./images/container2/iconPlay.svg");
+  background-image: url("./images/section/iconPlay.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px;
-  height: 100px;
+  width: 240px;
+  height: 110px;
   position: absolute;
-  margin-top: 130px;
-  margin-left: 205px;
+  margin-left: 105px;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 180px;
   color: #fff;
+  transition: 1s;
 }
 
-.container3 {
+.section__image:hover::after {
+  transform: scale(1.05);
+}
+
+/* advantages */
+
+.advantages {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1110px;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 10px auto;
 }
 
-.container3-content {
+.advantages__content {
   display: flex;
   align-items: center;
   min-height: 300px;
@@ -278,20 +275,57 @@ a:hover {
   gap: 0 90px;
 }
 
-.container3-main {
+.advantages__main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 1s;
 }
 
-.container3-desc {
+.advantages__main:hover {
+  transform: scale(1.05);
+}
+
+.advantages__desc {
   font-size: 18px;
   font-weight: 600;
 }
 
-.container3-p {
+.advantages__p {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+}
+
+/* advantages image */
+
+.advantages__main > img:hover {
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin-bottom: 0;
+  margin: 0 auto;
+}
+
+.footer__desc {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.politic {
+  color: var(--Link, #278aff);
+  font-size: 12px;
+  font-weight: 400;
+}
+.politic:hover {
+  color: var(--Link, #000000);
 }
