@@ -1,0 +1,24 @@
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin-bottom: 0;
+  margin: 20px auto;
+}
+
+.footer__desc {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.politic {
+  color: var(--Link, #278aff);
+  font-size: 12px;
+  font-weight: 400;
+}
+.politic:hover {
+  color: var(--Link, #000000);
+}

@@ -1,0 +1,47 @@
+/* advantages */
+
+.advantages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 30px auto 10px auto;
+}
+
+.advantages__content {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  margin: 0 20px;
+  gap: 0 90px;
+}
+
+.advantages__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s;
+}
+
+.advantages__main:hover {
+  transform: scale(1.05);
+}
+
+.advantages__desc {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.advantages__p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* advantages image */
+
+.advantages__main > img:hover {
+  transform: scale(1.05);
+  transition: 1s;
+}
