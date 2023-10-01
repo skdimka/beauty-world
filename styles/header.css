@@ -1,7 +1,7 @@
 /* header */
 
 .header {
-  background: url("./images/header/background.png");
+  background: url("/images/header/background.png");
 }
 
 .container__header {
@@ -107,7 +107,7 @@
 
 .header__image::before {
   content: "";
-  background-image: url("./images/header/girlBG.png");
+  background-image: url("/images/header/girlBG.png");
   background-repeat: no-repeat;
   width: 472px;
   height: 400px;

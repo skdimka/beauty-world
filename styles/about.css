@@ -1,4 +1,4 @@
-/* section */
+/* about */
 
 .about {
   display: flex;
@@ -37,7 +37,7 @@
   margin-top: 20px;
 }
 
-/* section image */
+/* about image */
 
 .about__image {
   position: relative;
@@ -50,9 +50,9 @@
   position: absolute;
 }
 
-.section__image::after {
+.about__image::after {
   content: "Короткое видео о нас";
-  background-image: url("./images/about/iconPlay.svg");
+  background-image: url("/images/about/iconPlay.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 240px;
@@ -65,6 +65,6 @@
   transition: 1s;
 }
 
-.section__image:hover::after {
+.about__image:hover::after {
   transform: scale(1.05);
 }
