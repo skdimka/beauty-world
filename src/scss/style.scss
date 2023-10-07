@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +8,7 @@ html,
 body {
   font-family: "Montserrat", "sans-serif";
   font-size: 14px;
-  color: #333;
+  color: $font-color;
 }
 
 h1,
@@ -19,12 +21,33 @@ p {
   margin: 0;
 }
 
+.section {
+  display: flex;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
 a {
-  color: #333;
+  color: $font-color;
   font-weight: 700;
   text-decoration: none;
 }
 
 a:hover {
   color: #00bf78;
+}
+
+.btn {
+  background-color: #fb9475;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
 }

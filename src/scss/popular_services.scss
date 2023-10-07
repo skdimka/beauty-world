@@ -1,0 +1,43 @@
+.popular {
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 30px;
+    gap: 48px 50px;
+    margin-bottom: 70px;
+
+    &__card {
+      width: 30%;
+
+      h6 {
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 15px;
+      }
+
+      p {
+        padding-top: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    &__img {
+      border-radius: 8px;
+    }
+
+    &__btn {
+      padding: 10px 20px;
+      margin-top: 15px;
+    }
+  }
+}
