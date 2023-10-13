@@ -1,0 +1,95 @@
+.staff-back {
+  width: 100%;
+  background-color: #f8f6f7;
+  padding: 80px 0;
+  margin-bottom: 20px;
+}
+
+.staff {
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 0;
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &__image {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    min-width: 255px;
+    height: 300px;
+    color: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__image-1 {
+    background-image: url(../images/staff/card1.png);
+    transition: 1s ease-out;
+  }
+  &__image-2 {
+    background-image: url(../images/staff/card2.png);
+    transition: 1s ease-out;
+  }
+  &__image-3 {
+    background-image: url(../images/staff/card3.png);
+    transition: 1s ease-out;
+  }
+  &__image-4 {
+    background-image: url(../images/staff/card4.png);
+    transition: 1s ease-out;
+  }
+  &__image-1:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url(../images/staff/card1.png);
+    transform: scale(1.02);
+  }
+  &__image-2:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url(../images/staff/card2.png);
+    transform: scale(1.02);
+  }
+  &__image-3:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url(../images/staff/card3.png);
+    transform: scale(1.02);
+  }
+  &__image-4:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url(../images/staff/card4.png);
+    transform: scale(1.02);
+  }
+  &__image:hover {
+    color: white;
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  &__profession {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+  &__exp {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}

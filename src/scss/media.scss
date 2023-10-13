@@ -1,0 +1,372 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1280px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .header {
+    &__main {
+      margin-left: 20px;
+      z-index: 2;
+    }
+    &__image {
+      opacity: 0.7;
+    }
+    &__image::before {
+      margin-left: -135px;
+    }
+    &__logo {
+      margin: 40px;
+    }
+    &__contact {
+      position: relative;
+      margin-top: -70px;
+    }
+    &__title {
+      font-size: 42px;
+      font-weight: 500;
+    }
+    &__desc {
+      font-size: 18px;
+      font-weight: 300;
+    }
+    &__btn {
+      padding: 17px 30px;
+      margin-top: 15px;
+    }
+    .image__girl {
+      margin-left: -160px;
+      margin-top: 7px;
+    }
+
+    .social__icons {
+      z-index: 3;
+    }
+    .navigation__block {
+      display: block;
+    }
+  }
+
+  .contact {
+    &__number {
+      font-size: 10px;
+    }
+    &__description {
+      font-size: 5px;
+    }
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+
+    &__content {
+      max-width: 768px;
+    }
+
+    &__title {
+      font-size: 44px;
+    }
+    &__desc {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    &__p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    &__image {
+      margin-left: -440px;
+      margin-top: 20px;
+    }
+  }
+
+  .advantages {
+    &__content {
+      gap: 0 20px;
+    }
+    &__main {
+      min-width: 220px;
+    }
+
+    &__desc {
+      font-size: 15px;
+    }
+    &__p {
+      font-size: 11px;
+    }
+  }
+
+  .popular {
+    margin-left: 10px;
+    &__title {
+      text-align: center;
+      font-size: 44px;
+    }
+    &__services {
+      margin-left: 80px;
+
+      gap: 20px 150px;
+    }
+  }
+  .price {
+    margin: 0 0 10px 0;
+
+    &__title {
+      font-size: 44px;
+      text-align: center;
+    }
+    &__navigation {
+      margin-left: 20px;
+      &__list {
+        gap: 0 10px;
+      }
+
+      &__link {
+        font-size: 12px;
+      }
+    }
+    &__container {
+      margin-left: 20px;
+    }
+    &__service-name {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &__desc {
+      font-size: 10px;
+    }
+    &__price {
+      font-size: 16px;
+    }
+  }
+  .staff {
+    text-align: center;
+
+    &__title {
+      font-size: 44px;
+    }
+    &__list {
+      column-gap: 70px;
+      row-gap: 20px;
+      margin-left: 190px;
+    }
+  }
+  .footer {
+    .navigation__list {
+      gap: 0 18px;
+    }
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .header {
+    &__image {
+      display: none;
+    }
+    &__contact {
+      margin-top: -70px;
+    }
+
+    .image__girl {
+      margin-left: -160px;
+      margin-top: 7px;
+    }
+  }
+
+  .about {
+    &__content {
+      max-width: 480px;
+    }
+  }
+
+  .advantages {
+    &__content {
+      flex-direction: column;
+      gap: 0 20px;
+    }
+  }
+
+  .popular {
+    display: none;
+    &__title {
+      text-align: center;
+      font-size: 40px;
+    }
+    &__services {
+      margin-left: 0;
+      gap: 20px 150px;
+    }
+  }
+
+  .staff {
+    text-align: center;
+
+    &__title {
+      font-size: 44px;
+    }
+    &__list {
+      column-gap: 70px;
+      row-gap: 20px;
+      margin-left: 70px;
+    }
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .header {
+    &__main {
+      margin: 10px;
+    }
+    &__image {
+      display: none;
+    }
+
+    &__logo {
+      margin-left: 5px;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__btn {
+      padding: 17px 30px;
+      margin-top: 25px;
+    }
+
+    &__content {
+      min-height: 450px;
+    }
+    &__contact {
+      margin-top: -70px;
+    }
+
+    .navigation__list {
+      gap: 0 11px;
+      border: 1px solid;
+      padding-left: 25px;
+    }
+    .navigation__link {
+      font-size: 10px;
+    }
+    .contact__desc {
+      font-size: 8px;
+    }
+  }
+  .about {
+    &__title {
+      font-size: 30px;
+    }
+    &__content {
+      max-width: 320px;
+    }
+    &__image {
+      display: none;
+    }
+  }
+  .advantages__main {
+    margin-bottom: 20px;
+  }
+
+  .popular {
+    &__title {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 10px;
+      padding-top: 7px;
+      width: 350px;
+      line-height: 12px;
+    }
+  }
+
+  .price {
+    &__container {
+      margin: 10px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+    &__list {
+      row-gap: 15px;
+    }
+    &__item {
+      min-width: 320px;
+    }
+
+    &__navigation {
+      &__list {
+        display: inline-block;
+        list-style: square;
+        margin: 0;
+      }
+
+      &__link {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .staff {
+    &__title {
+      font-size: 30px;
+    }
+    &__list {
+      margin-left: 60px;
+    }
+  }
+
+  .footer {
+    margin-left: 15px;
+    .navigation__list {
+      display: none;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .header {
+    &__logo {
+      margin-left: 5px;
+      font-size: 22px;
+    }
+
+    &__title {
+      font-size: 34px;
+    }
+
+    &__btn {
+      margin-top: 20px;
+    }
+
+    &__content {
+      min-height: 450px;
+    }
+    &__contact {
+      &__number {
+        font-size: 14px;
+      }
+      &__desc {
+        font-size: 8px;
+      }
+    }
+
+    .navigation__list {
+      padding-left: 5px;
+      gap: 0 5px;
+    }
+    .navigation__link {
+      font-size: 10px;
+    }
+  }
+  .staff {
+    &__list {
+      margin-left: 25px;
+    }
+  }
+}
