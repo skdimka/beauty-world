@@ -1,0 +1,98 @@
+.portfolio {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    color: #333;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 24px;
+    margin: 0 0 100px 0;
+  }
+  &__item-1 {
+    background-image: url(../images/portfolio/1.png);
+  }
+  &__item-2 {
+    background-image: url(../images/portfolio/2.png);
+  }
+  &__item-3 {
+    background-image: url(../images/portfolio/3.png);
+  }
+  &__item-4 {
+    background-image: url(../images/portfolio/4.png);
+  }
+  &__item-1:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url(../images/portfolio/1.png);
+    transform: scale(1.06);
+  }
+  &__item-2:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url(../images/portfolio/2.png);
+    transform: scale(1.06);
+  }
+  &__item-3:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url(../images/portfolio/3.png);
+    transform: scale(1.06);
+  }
+  &__item-4:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url(../images/portfolio/4.png);
+    transform: scale(1.06);
+  }
+  &__item {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-width: 338px;
+    height: 338px;
+    border-radius: 12px;
+  }
+
+  &-item__container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 40%;
+    left: 40%;
+    color: rgba(0, 0, 0, 0);
+  }
+  &__item:hover svg {
+    fill: white;
+  }
+  &__item:hover p {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.container__arrow-btn {
+  display: flex;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.arrow-btn:hover {
+  background: #f8f6f7;
+  border-radius: 60%;
+  cursor: pointer;
+}
