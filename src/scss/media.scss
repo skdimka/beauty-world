@@ -212,6 +212,12 @@
     }
   }
 }
+
+.portfolio,
+.contacts {
+  display: none;
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .header {

@@ -9,13 +9,12 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 20px;
-    text-align: center;
   }
 
   &__list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     opacity: 0.3;
     list-style-type: none;
     gap: 30px;
