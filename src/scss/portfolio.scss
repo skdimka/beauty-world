@@ -1,4 +1,8 @@
 .portfolio {
+  &__container {
+    margin: 0;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +24,7 @@
   }
   &__item-1 {
     background-image: url(../images/portfolio/1.png);
+    position: absolute;
   }
   &__item-2 {
     background-image: url(../images/portfolio/2.png);
