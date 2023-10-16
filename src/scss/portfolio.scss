@@ -7,24 +7,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
   }
 
   &__title {
     color: #333;
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 20px;
   }
   &__list {
+    padding: 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    // justify-content: flex-start;
+    // align-items: center;
     column-gap: 24px;
     margin: 0 0 100px 0;
   }
   &__item-1 {
     background-image: url(../images/portfolio/1.png);
-    position: absolute;
   }
   &__item-2 {
     background-image: url(../images/portfolio/2.png);

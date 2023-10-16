@@ -1,6 +1,19 @@
 @import "./_variables.scss";
 @import "./_libs.scss";
 
+@import "./header.css";
+@import "./navigation.css";
+@import "./about.css";
+@import "./advantages.css";
+@import "./footer.css";
+@import "./popular_services.css";
+@import "./price.css";
+@import "./staff.css";
+@import "./media.css";
+@import "./portfolio.css";
+@import "./brands.css";
+@import "./connection.css";
+
 * {
   box-sizing: border-box;
 }
