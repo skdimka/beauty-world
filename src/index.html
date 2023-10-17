@@ -27,10 +27,6 @@
   
   <!-- Overlay content -->
   <div class="overlay-content">
-    <!-- <a href="http://www.chris-cook.net" target="_blank">HOME</a>
-    <a href="http://www.chris-cook.net" target="_blank">ABOUT</a>
-    <a href="http://www.chris-cook.net" target="_blank">SERVICES</a>
-    <a href="http://www.chris-cook.net" target="_blank">CONTACT</a> -->
 
         <a href="" class="navigation__link">Услуги и цены</a>
         <a href="" class="navigation__link">Мастера</a>
@@ -238,105 +234,303 @@
       </div>
     </section>
 
-    <section class="price section">
-      <div class="price__container">
-        <h1 class="price__title">Услуги и цены</h1>
+    <div class="price-back">
+    <section class="price-section">
+      <h1 class="price__title">Услуги и цены</h1>
 
-        <nav class="price__navigation">
-          <ul class="price__navigation__list">
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link active"
-                >Стрижка и укладка</a
-              >
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Косметология</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Маникюр и педикюр</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Макияж</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Брови и ресницы</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Массаж</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="price__navigation">
 
-        <div class="price__container">
-          <ul class="price__list">
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Женская стрижка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+    
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Haircut-and-styling')" id="defaultOpen">Стрижка и укладка</button>
+      <button class="tablinks" onclick="openCity(event, 'Cosmetology')">Косметология</button>
+      <button class="tablinks" onclick="openCity(event, 'Manicure-and-pedicure')">Маникюр и педикюр</button>
+      <button class="tablinks" onclick="openCity(event, 'Makeup')">Макияж</button>
+      <button class="tablinks" onclick="openCity(event, 'Eyebrows-and-eyelashes')">Брови и ресницы</button>
+      <button class="tablinks" onclick="openCity(event, 'Massage')">Массаж</button>
+    </div>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Стрижка бороды и усов</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+  </div>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Мужская стрижка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Экспресс укладка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+  <!-- Haircut-and-styling -->
+    
+    <div id="Haircut-and-styling" class="tabcontent">
+      
+      <ul class="price__list">
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Женская стрижка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Детский Стиль</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Стрижка бороды и усов</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Укладка дневная</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Мужская стрижка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Экспресс укладка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Креативный Стиль</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Детский Стиль</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">
-                  Прическа вечерняя (свадебная)
-                </h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">3000 ₽</p>
-            </li>
-          </ul>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Укладка дневная</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Креативный Стиль</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">
+              Прическа вечерняя (свадебная)
+            </h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">3000 ₽</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cosmetology -->
+    
+    <div id="Cosmetology" class="tabcontent">
+      <ul class="price__list">
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Консультация косметолога</h4>
+            <p class="price__desc">Первичный прием</p>
+          </div>
+          <p class="price__price">1500 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Чистка лица</h4>
+            <p class="price__desc">Женская чистка лица</p>
+          </div>
+          <p class="price__price">1500 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Фотоомоложение</h4>
+            <p class="price__desc">Нужна консультация с врачем</p>
+          </div>
+          <p class="price__price">5000 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Фотоэпиляция</h4>
+            <p class="price__desc">Не для всех типов кожи</p>
+          </div>
+          <p class="price__price">2500 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Ультразвуковая чистка лица</h4>
+            <p class="price__desc">Не для всех типов кожи</p>
+          </div>
+          <p class="price__price">1000 ₽</p>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Manicure-and-pedicure -->
+    
+    <div id="Manicure-and-pedicure" class="tabcontent">
+      <ul class="price__list">
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Мужская стрижка</h4>
+          <p class="price__desc">Короткие волосы</p>
         </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Экспресс укладка</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Детский Стиль</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Укладка дневная</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Креативный Стиль</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">
+            Прическа вечерняя (свадебная)
+          </h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">3000 ₽</p>
+      </li>
+    </ul>
+    </div>
+
+    <!-- Makeup -->
+
+
+    <div id="Makeup" class="tabcontent">
+      
+      <ul class="price__list">
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Татуаж бровей, губ</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">4000 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Стрижка бороды и усов</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">
+              Прическа вечерняя (свадебная)
+            </h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">3000 ₽</p>
+        </li>
+      </ul>
       </div>
-    </section>
+
+      <!-- Eyebrows and eyelashes -->
+
+      <div id="Eyebrows-and-eyelashes" class="tabcontent">
+      
+        <ul class="price__list">
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Брови</h4>
+              <p class="price__desc">Любой формы</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Брови и Ресницы</h4>
+              <p class="price__desc">Вместе дешевле!</p>
+            </div>
+            <p class="price__price">2500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Ресницы</h4>
+              <p class="price__desc">Любой длинны</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+
+
+        </ul>
+        </div>
+
+      <!-- Massage -->
+        
+      <div id="Massage" class="tabcontent">
+      
+        <ul class="price__list">
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Спортивный массаж</h4>
+              <p class="price__desc">Подойдет для спортсменов </p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Рассляюляющий</h4>
+              <p class="price__desc">Приятный массаж со смягчающим маслом</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">
+                На все тело
+              </h4>
+              <p class="price__desc">Начиная с головы и до кончиков пальцев</p>
+            </div>
+            <p class="price__price">3000 ₽</p>
+          </li>
+        </ul>
+        </div>
+
+
+  </section>
+</div>
+
+
 
     <div class="staff-back">
       <section class="staff section">
@@ -514,6 +708,7 @@
           
 
 
+
     <footer class="footer">
       <div class="footer-block">
         <h6 class="footer__desc">© 2020 «Море красоты»</h6>
@@ -539,6 +734,7 @@
         </ul>
       </nav>
     </footer>
+    
   </body>
   <script src="./index.js"></script>
 </html>

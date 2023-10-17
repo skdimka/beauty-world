@@ -139,8 +139,7 @@
   z-index: 999999;
   left: 0;
   top: 0;
-  background-color: rgb(51, 51, 51);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -157,7 +156,7 @@
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #fff !important;
+  color: black;
   display: block;
   transition: 0.3s;
   text-transform: uppercase;
