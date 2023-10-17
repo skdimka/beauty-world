@@ -25,3 +25,24 @@ function openCity(evt, cityName) {
 
 
 document.getElementById("defaultOpen").click();
+
+
+function handleFormSubmit(event) {
+    event.preventDefault()
+
+    const { name, phoneNumber } = event.target;
+
+    const User = {
+        name: name.value,
+        phoneNumber: phoneNumber.value
+    };
+
+    console.log(User);
+    console.log('Отправка!')
+
+    input1.value = "";
+    input2.value = "";
+}
+
+const applicantForm = document.getElementById('form1')
+applicantForm.addEventListener('submit', handleFormSubmit)

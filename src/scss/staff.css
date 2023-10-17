@@ -1,0 +1,90 @@
+.staff-back {
+  width: 100%;
+  background-color: #f8f6f7;
+  padding: 80px 0;
+  margin-bottom: 20px;
+}
+
+.staff__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.staff__desc {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.staff__list {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+  padding: 0;
+}
+.staff__item {
+  list-style-type: none;
+}
+.staff__image {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  min-width: 255px;
+  height: 300px;
+  color: rgba(0, 0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.staff__image-1 {
+  background-image: url(../images/staff/card1.png);
+  transition: 1s ease-out;
+}
+.staff__image-2 {
+  background-image: url(../images/staff/card2.png);
+  transition: 1s ease-out;
+}
+.staff__image-3 {
+  background-image: url(../images/staff/card3.png);
+  transition: 1s ease-out;
+}
+.staff__image-4 {
+  background-image: url(../images/staff/card4.png);
+  transition: 1s ease-out;
+}
+.staff__image-1:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/staff/card1.png);
+  transform: scale(1.02);
+}
+.staff__image-2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/staff/card2.png);
+  transform: scale(1.02);
+}
+.staff__image-3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/staff/card3.png);
+  transform: scale(1.02);
+}
+.staff__image-4:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/staff/card4.png);
+  transform: scale(1.02);
+}
+.staff__image:hover {
+  color: white;
+}
+.staff__name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.staff__profession {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+.staff__exp {
+  font-size: 12px;
+  font-weight: 300;
+}/*# sourceMappingURL=staff.css.map */
