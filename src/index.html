@@ -12,18 +12,43 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/" />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/navigation.css" />
-    <link rel="stylesheet" href="./css/about.css" />
-    <link rel="stylesheet" href="./css/advantages.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/popular_services.css" />
-    <link rel="stylesheet" href="./css/price.css" />
-    <link rel="stylesheet" href="./css/staff.css" />
-    <link rel="stylesheet" href="./css/media.css" />
+
     <title>Мир Красоты</title>
   </head>
   <body>
+
+
+
+    <!-- The overlay Menu -->
+<div id="myNav" class="overlay">
+  
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <!-- Overlay content -->
+  <div class="overlay-content">
+
+        <a href="" class="navigation__link">Услуги и цены</a>
+        <a href="" class="navigation__link">Мастера</a>
+        <a href="" class="navigation__link">Наши работы</a>
+        <a href="" class="navigation__link">О нас</a>
+        <a href="" class="navigation__link">Контакты</a>
+  </div>
+  
+</div>
+
+<div onclick="openNav()" class="navMenu">&#9776;</div>
+
+<div class="myPage">
+<!--   
+  <h1>MAIN PAGE</h1>
+  
+  <h3>Place Content Here</h3> -->
+  
+</div>
+
+
+
     <header class="header">
       <div class="container__header">
         <div class="navigation__block">
@@ -209,105 +234,303 @@
       </div>
     </section>
 
-    <section class="price section">
-      <div class="price__container">
-        <h1 class="price__title">Услуги и цены</h1>
+    <div class="price-back">
+    <section class="price-section">
+      <h1 class="price__title">Услуги и цены</h1>
 
-        <nav class="price__navigation">
-          <ul class="price__navigation__list">
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link active"
-                >Стрижка и укладка</a
-              >
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Косметология</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Маникюр и педикюр</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Макияж</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Брови и ресницы</a>
-            </li>
-            <li class="price__navigation__item">
-              <a href="" class="price__navigation__link">Массаж</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="price__navigation">
 
-        <div class="price__container">
-          <ul class="price__list">
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Женская стрижка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+    
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Haircut-and-styling')" id="defaultOpen">Стрижка и укладка</button>
+      <button class="tablinks" onclick="openCity(event, 'Cosmetology')">Косметология</button>
+      <button class="tablinks" onclick="openCity(event, 'Manicure-and-pedicure')">Маникюр и педикюр</button>
+      <button class="tablinks" onclick="openCity(event, 'Makeup')">Макияж</button>
+      <button class="tablinks" onclick="openCity(event, 'Eyebrows-and-eyelashes')">Брови и ресницы</button>
+      <button class="tablinks" onclick="openCity(event, 'Massage')">Массаж</button>
+    </div>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Стрижка бороды и усов</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+  </div>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Мужская стрижка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Экспресс укладка</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+  <!-- Haircut-and-styling -->
+    
+    <div id="Haircut-and-styling" class="tabcontent">
+      
+      <ul class="price__list">
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Женская стрижка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Детский Стиль</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Стрижка бороды и усов</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Укладка дневная</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Мужская стрижка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Экспресс укладка</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">Креативный Стиль</h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">1200 ₽</p>
-            </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Детский Стиль</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
 
-            <li class="price__item">
-              <div>
-                <h4 class="price__service-name">
-                  Прическа вечерняя (свадебная)
-                </h4>
-                <p class="price__desc">Короткие волосы</p>
-              </div>
-              <p class="price__price">3000 ₽</p>
-            </li>
-          </ul>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Укладка дневная</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Креативный Стиль</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">
+              Прическа вечерняя (свадебная)
+            </h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">3000 ₽</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cosmetology -->
+    
+    <div id="Cosmetology" class="tabcontent">
+      <ul class="price__list">
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Консультация косметолога</h4>
+            <p class="price__desc">Первичный прием</p>
+          </div>
+          <p class="price__price">1500 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Чистка лица</h4>
+            <p class="price__desc">Женская чистка лица</p>
+          </div>
+          <p class="price__price">1500 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Фотоомоложение</h4>
+            <p class="price__desc">Нужна консультация с врачем</p>
+          </div>
+          <p class="price__price">5000 ₽</p>
+        </li>
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Фотоэпиляция</h4>
+            <p class="price__desc">Не для всех типов кожи</p>
+          </div>
+          <p class="price__price">2500 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Ультразвуковая чистка лица</h4>
+            <p class="price__desc">Не для всех типов кожи</p>
+          </div>
+          <p class="price__price">1000 ₽</p>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Manicure-and-pedicure -->
+    
+    <div id="Manicure-and-pedicure" class="tabcontent">
+      <ul class="price__list">
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Мужская стрижка</h4>
+          <p class="price__desc">Короткие волосы</p>
         </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Экспресс укладка</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Детский Стиль</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Укладка дневная</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">Креативный Стиль</h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">1200 ₽</p>
+      </li>
+
+      <li class="price__item">
+        <div>
+          <h4 class="price__service-name">
+            Прическа вечерняя (свадебная)
+          </h4>
+          <p class="price__desc">Короткие волосы</p>
+        </div>
+        <p class="price__price">3000 ₽</p>
+      </li>
+    </ul>
+    </div>
+
+    <!-- Makeup -->
+
+
+    <div id="Makeup" class="tabcontent">
+      
+      <ul class="price__list">
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Татуаж бровей, губ</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">4000 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">Стрижка бороды и усов</h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">1200 ₽</p>
+        </li>
+
+        <li class="price__item">
+          <div>
+            <h4 class="price__service-name">
+              Прическа вечерняя (свадебная)
+            </h4>
+            <p class="price__desc">Короткие волосы</p>
+          </div>
+          <p class="price__price">3000 ₽</p>
+        </li>
+      </ul>
       </div>
-    </section>
+
+      <!-- Eyebrows and eyelashes -->
+
+      <div id="Eyebrows-and-eyelashes" class="tabcontent">
+      
+        <ul class="price__list">
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Брови</h4>
+              <p class="price__desc">Любой формы</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Брови и Ресницы</h4>
+              <p class="price__desc">Вместе дешевле!</p>
+            </div>
+            <p class="price__price">2500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Ресницы</h4>
+              <p class="price__desc">Любой длинны</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+
+
+        </ul>
+        </div>
+
+      <!-- Massage -->
+        
+      <div id="Massage" class="tabcontent">
+      
+        <ul class="price__list">
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Спортивный массаж</h4>
+              <p class="price__desc">Подойдет для спортсменов </p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">Рассляюляющий</h4>
+              <p class="price__desc">Приятный массаж со смягчающим маслом</p>
+            </div>
+            <p class="price__price">1500 ₽</p>
+          </li>
+  
+          <li class="price__item">
+            <div>
+              <h4 class="price__service-name">
+                На все тело
+              </h4>
+              <p class="price__desc">Начиная с головы и до кончиков пальцев</p>
+            </div>
+            <p class="price__price">3000 ₽</p>
+          </li>
+        </ul>
+        </div>
+
+
+  </section>
+</div>
+
+
 
     <div class="staff-back">
       <section class="staff section">
@@ -356,6 +579,136 @@
       </section>
     </div>
 
+    <section class="portfolio">
+      <div class="portfolio__header section">
+
+        <h2 class="portfolio__title">Наши работы</h2>
+
+        <div class="container__arrow-btn">
+        <div class="arrow-btn" id="">
+          <img class="slider-btn btn-prev" src="./images/portfolio/btn2.svg" alt="" width="16px"
+            height="16px" />
+        </div>
+        <div class="arrow-btn" id="">
+          <img class="slider-btn btn-next" src="./images/portfolio/btn1.svg" alt="" width="16px"
+            height="16x" />
+        </div>
+      </div>
+      </div>
+
+      <div class="portfolio__container">
+
+        <ul class="portfolio__list" >
+
+          <li class="portfolio__item portfolio__item-1">
+            <a href="" class="portfolio__link">
+              <div class="portfolio-item__container">
+                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                </svg>
+                <p>Увеличить</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio__item portfolio__item-2">
+            <a href="" class="portfolio__link">
+              <div class="portfolio-item__container">
+                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                </svg>
+                <p>Увеличить</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio__item portfolio__item-3">
+            <a href="" class="portfolio__link">
+              <div class="portfolio-item__container">
+                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                </svg>
+                <p>Увеличить</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio__item portfolio__item-4">
+            <a href="" class="portfolio__link">
+              <div class="portfolio-item__container">
+                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                </svg>
+                <p>Увеличить</p>
+              </div>
+            </a>
+          </li>
+
+    </section>
+
+    <section class="brands section">
+      <h2 class="brands__title">Бренды, которые мы используем в работе</h2>
+                  <ul class="brands__list">
+                    <li class="brands__item">
+                      <img src="./images/brands/1.png" alt="" />
+                    </li>
+                    <li class="brands__item">
+                      <img src="./images/brands/2.png" alt="" />
+                    </li>
+                    <li class="brands__item">
+                      <img src="./images/brands/3.png" alt="" />
+                    </li>
+                    <li class="brands__item">
+                      <img src="./images/brands/4.png" alt="" />
+                    </li>
+                    <li class="brands__item">
+                      <img src="./images/brands/5.png" alt="" />
+                    </li>
+                  </ul>
+          </section>
+
+          <div class="contacts">
+            <section class="contacts__section section">
+              <div class="contatcs__info" >
+                <h2 class="contatcs__info__title">Контакты</h2>
+                <p class="contatcs__info__adress">Томск, проспект Ленина, дом 13</p>
+                <a href="tel:84996861762" class="contatcs__info__number">8 (499) 686-17-62</a>
+                <a href="#" class="contatcs__info__email">info@more-krasoty.ru</a>
+                <p class="contatcs__info__social">Мы в социальных сетях</p>
+                <div class="contatcs__info__list-icon social__icons">
+                  <img src="./images/header/vk.png" alt="">
+                  <img src="./images/header/inst.png" alt="">
+                  <img src="./images/header/yt.png" alt="">
+              </div>
+            </div>
+
+              <form class="form">
+                <div class="form__container">
+                  <h3 class="form__title">Быстрая запись</h3>
+                  <p class="form__info">Наш менеджер перезвонит в течение нескольких минут, уточнит
+                    подробности и согласует время. </p>
+                  <input class="form__input" type="name" placeholder="Ваше имя" />
+                  <input class="form__input" type="tel" placeholder="+7 (___) ___-__-__"/>
+                  <button class="btn form__button">Записаться</button>
+                  <p class="form__desc"> Нажимая на кнопку вы соглашаетесь с
+                    <a href="#">обработкой персональных данных</a></p>
+                </div>
+              </form>
+              
+            </section>
+          </div>
+          
+
+
+
     <footer class="footer">
       <div class="footer-block">
         <h6 class="footer__desc">© 2020 «Море красоты»</h6>
@@ -381,5 +734,7 @@
         </ul>
       </nav>
     </footer>
+    
   </body>
+  <script src="./index.js"></script>
 </html>

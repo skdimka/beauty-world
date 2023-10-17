@@ -118,3 +118,59 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+/* Nav Button */
+.navMenu {
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15px;
+  right: 15px;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #999 !important;
+}
+
+.closebtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 60px !important;
+}
