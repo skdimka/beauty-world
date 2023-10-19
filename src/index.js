@@ -23,9 +23,10 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-
 document.getElementById("defaultOpen").click();
 
+const applicantForm = document.getElementById('form1')
+applicantForm.addEventListener('submit', handleFormSubmit)
 
 function handleFormSubmit(event) {
     event.preventDefault()
@@ -38,11 +39,9 @@ function handleFormSubmit(event) {
     };
 
     console.log(User);
-    console.log('Отправка!')
-
-    input1.value = "";
-    input2.value = "";
+    document.getElementById("form1").reset();
 }
 
-const applicantForm = document.getElementById('form1')
-applicantForm.addEventListener('submit', handleFormSubmit)
+
+
+
