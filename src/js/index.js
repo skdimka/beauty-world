@@ -42,6 +42,19 @@ function handleFormSubmit(event) {
     document.getElementById("form1").reset();
 }
 
+const anchors = document.querySelectorAl1(`a[href*= "#"]`)
+
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute("href")
+        document.querySelector(" " + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
+
 
 
 // const swiper = new Swiper('.swiper', {
