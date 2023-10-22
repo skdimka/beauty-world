@@ -94,4 +94,28 @@
   background: #f8f6f7;
   border-radius: 60%;
   cursor: pointer;
+}
+
+#myCarousel {
+  --f-carousel-spacing: 10px;
+  --f-carousel-slide-width: 25%;
+}
+
+#myCarousel .f-carousel__slide {
+  padding: 50px;
+  margin: 0;
+}
+
+.f-button {
+  margin: 100px;
+}
+
+.swiper {
+  width: 1400px;
+  height: 300px;
+}
+
+.cnopka1 {
+  display: block;
+  position: static;
 }/*# sourceMappingURL=portfolio.css.map */
