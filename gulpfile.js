@@ -41,7 +41,9 @@ function buildJs() {
 
 // Таск работы с html файлами
 function html() {
-    return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream())
+    return src('src/**/*.html')
+        .pipe(dest('dist/'))
+        .pipe(browserSync.stream())
 }
 
 function browsersync() {
