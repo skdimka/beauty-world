@@ -2,3 +2,4 @@
 .DS_Store
 /src/css
 /dist
+/src/js/main.min.js

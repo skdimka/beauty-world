@@ -1,0 +1,121 @@
+.portfolio__container {
+  margin: 0;
+  margin-bottom: 40px;
+}
+.portfolio__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.portfolio__title {
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.portfolio__list {
+  padding: 0;
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  margin-bottom: 100px;
+}
+.portfolio__item-1 {
+  background-image: url(../images/portfolio/1.png);
+}
+.portfolio__item-2 {
+  background-image: url(../images/portfolio/2.png);
+}
+.portfolio__item-3 {
+  background-image: url(../images/portfolio/3.png);
+}
+.portfolio__item-4 {
+  background-image: url(../images/portfolio/4.png);
+}
+.portfolio__item-1:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../images/portfolio/1.png);
+  transform: scale(1.06);
+}
+.portfolio__item-2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../images/portfolio/2.png);
+  transform: scale(1.06);
+}
+.portfolio__item-3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../images/portfolio/3.png);
+  transform: scale(1.06);
+}
+.portfolio__item-4:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../images/portfolio/4.png);
+  transform: scale(1.06);
+}
+.portfolio__item {
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  min-width: 338px;
+  height: 338px;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+}
+.portfolio-item__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 40%;
+  left: 40%;
+  color: rgba(0, 0, 0, 0);
+}
+.portfolio__item:hover svg {
+  fill: white;
+}
+.portfolio__item:hover p {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container__arrow-btn {
+  display: flex;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow-btn:hover {
+  background: #f8f6f7;
+  border-radius: 60%;
+  cursor: pointer;
+}
+
+#myCarousel {
+  --f-carousel-spacing: 10px;
+  --f-carousel-slide-width: 25%;
+}
+
+#myCarousel .f-carousel__slide {
+  padding: 50px;
+  margin: 0;
+}
+
+.f-button {
+  margin: 100px;
+}
+
+.swiper {
+  width: 1400px;
+  height: 300px;
+}
+
+.cnopka1 {
+  display: block;
+  position: static;
+}/*# sourceMappingURL=portfolio.css.map */

@@ -1,0 +1,116 @@
+.price {
+  margin: 0 auto;
+  min-width: 1280px;
+}
+.price__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+.price__navigation {
+  margin-bottom: 40px;
+}
+.price__navigation__list {
+  display: flex;
+  list-style: none;
+  gap: 0 35px;
+  padding-left: 0;
+}
+.price__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  row-gap: 30px;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+}
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  min-width: 440px;
+  max-height: 50px;
+}
+.price__service-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.price__desc {
+  font-size: 14px;
+  font-weight: 400;
+}
+.price__price {
+  color: #00bf78;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.active {
+  color: #00bf78;
+}
+
+.active::after {
+  content: "";
+  height: 2px;
+  background: #00bf78;
+  margin-top: 2px;
+  display: block;
+}
+
+.price-back {
+  width: 100%;
+  padding: 80px 0;
+  margin-bottom: 20px;
+}
+
+.price-section {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.tab {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tablinks {
+  margin-bottom: 10px;
+}
+
+.tab button {
+  padding-left: 0;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 16px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tab button:hover {
+  color: #00bf78;
+  transform: scale(1.01);
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {
+  color: red;
+}/*# sourceMappingURL=price.css.map */

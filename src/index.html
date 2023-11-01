@@ -13,41 +13,45 @@
 
     <link rel="stylesheet" href="./css/style.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+
     <title>Мир Красоты</title>
   </head>
   <body>
+    
+    <div id="myNav" class="overlay">
+      
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
 
+      
+      <div class="overlay-content">
+        <a href="#price" class="navigation__link">Услуги и цены</a>
+        <a href="#staff" class="navigation__link">Мастера</a>
+        <a href="#portfolio" class="navigation__link">Наши работы</a>
+        <a href="#about" class="navigation__link">О нас</a>
+        <a href="#contacts" class="navigation__link">Контакты</a>
+      </div>
+    </div>
 
-
-    <!-- The overlay Menu -->
-<div id="myNav" class="overlay">
-  
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  
-  <!-- Overlay content -->
-  <div class="overlay-content">
-
-        <a href="" class="navigation__link">Услуги и цены</a>
-        <a href="" class="navigation__link">Мастера</a>
-        <a href="" class="navigation__link">Наши работы</a>
-        <a href="" class="navigation__link">О нас</a>
-        <a href="" class="navigation__link">Контакты</a>
-  </div>
-  
-</div>
-
-<div onclick="openNav()" class="navMenu">&#9776;</div>
-
-<div class="myPage">
-<!--   
-  <h1>MAIN PAGE</h1>
-  
-  <h3>Place Content Here</h3> -->
-  
-</div>
-
-
+    <div onclick="openNav()" class="navMenu">&#9776;</div>
 
     <header class="header">
       <div class="container__header">
@@ -57,19 +61,19 @@
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="" class="navigation__link">Услуги и цены</a>
+                <a href="#price" class="navigation__link">Услуги и цены</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link">Мастера</a>
+                <a href="#staff" class="navigation__link">Мастера</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link">Наши работы</a>
+                <a href="#portfolio" class="navigation__link">Наши работы</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link">О нас</a>
+                <a href="#about" class="navigation__link">О нас</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link">Контакты</a>
+                <a href="#contacts" class="navigation__link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -86,23 +90,75 @@
           <div class="header__main">
             <span class="header__title">Создай свой образ вместе с нами</span>
             <span class="header__desc">Идеальный образ за 60 минут</span>
-            <button class="btn header__btn">Записаться онлайн</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="header__btn btn"
+            >
+              Записаться онлайн
+            </button>
           </div>
 
           <div class="header__image">
-            <img class="image__girl" src="./images/header/girl.png" alt="" />
+            <img class="image__girl" src="./images/header/girl.png" alt="girl" />
           </div>
 
           <div class="social__icons">
-            <img src="./images/header/inst.png" alt="" />
-            <img src="./images/header/yt.png" alt="" />
-            <img src="./images/header/vk.png" alt="" />
+            <img src="./images/header/inst.png" alt="inst" />
+            <img src="./images/header/yt.png" alt="yt" />
+            <img src="./images/header/vk.png" alt="vk" />
           </div>
         </div>
       </div>
     </header>
 
-    <section class="about section">
+    <div id="dialog-content" style="display: none; max-width: 500px">
+      <h2>Заполните личные данные для записи</h2>
+
+      <div class="form__container">
+        <p class="form__info">
+          Наш менеджер перезвонит в течение нескольких минут, уточнит
+          подробности и согласует время.
+        </p>
+        <input
+          class="form__input"
+          type="name"
+          id="input1"
+          name="name"
+          placeholder="Ваше имя"
+          value=""
+        />
+        <input
+          class="form__input"
+          type="tel"
+          id="input2"
+          name="phoneNumber"
+          placeholder="+7 (___) ___-__-__"
+          value=""
+        />
+        <button type="submit" id="buttonForm" class="form__button btn">
+          Записаться
+        </button>
+        <p class="form__desc">
+          Нажимая на кнопку вы соглашаетесь с
+          <a href="#">обработкой персональных данных</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="dialog-content" style="display: none; max-width: 500px">
+      <h2>Заполните личные данные для записи</h2>
+
+      <div class="form__container">
+        <p class="form__info">
+          Наш менеджер перезвонит в течение нескольких минут, уточнит
+          подробности и согласует время.
+        </p>
+
+      </div>
+    </div>
+
+    <section id="about" class="about section">
       <div class="about__content">
         <div class="about__main">
           <span class="about__title">О салоне</span>
@@ -121,18 +177,20 @@
         </div>
       </div>
 
-      <div class="about__image">
-        <img class="image__salon" src="./images/about/salon.png" alt="" />
-      </div>
+      <a href="https://youtu.be/XaTwnKLQi4A?si=waPeqcu501Sa7_Af" data-fancybox="gallery" class="about__image">
+        <img class="image__salon" src="./images/about/salon.png" alt="salon" />
+      </a>
+
     </section>
+
 
     <section class="advantages">
       <div class="advantages__content">
         <div class="advantages__main">
-          <img src="./images/advantages/Group1.svg" alt="" />
-          <img src="./images/advantages/GroupSvg.png" alt="" />
+          <img src="./images/advantages/Group1.svg" alt="icon" />
+          <img src="./images/advantages/GroupSvg.png" alt="icon" />
           <span class="advantages__desc">Удобные кабинеты</span>
-          <img src="./images/advantages/GroupSvgSmall.png" alt="" />
+          <img src="./images/advantages/GroupSvgSmall.png" alt="icon" />
           <p class="advantages__p">
             Комфорт и стиль - принцип создания кабинетов салона красоты. Только
             эстетика и удобство для Вас
@@ -140,10 +198,10 @@
         </div>
 
         <div class="advantages__main">
-          <img src="./images/advantages/Group3.png" alt="" />
-          <img src="./images/advantages/GroupSvg.png" alt="" />
+          <img src="./images/advantages/Group3.png" alt="icon" />
+          <img src="./images/advantages/GroupSvg.png" alt="icon" />
           <span class="advantages__desc">Качественная косметика</span>
-          <img src="./images/advantages/GroupSvgSmall.png" alt="" />
+          <img src="./images/advantages/GroupSvgSmall.png" alt="icon" />
           <p class="advantages__p">
             Используем профессиональные материалы высшего качества лучших
             брендов
@@ -151,10 +209,10 @@
         </div>
 
         <div class="advantages__main">
-          <img src="./images/advantages/Group2.png" alt="" />
-          <img src="./images/advantages/GroupSvg.png" alt="" />
+          <img src="./images/advantages/Group2.png" alt="icon" />
+          <img src="./images/advantages/GroupSvg.png" alt="icon" />
           <span class="advantages__desc">Опытные мастера</span>
-          <img src="./images/advantages/GroupSvgSmall.png" alt="" />
+          <img src="./images/advantages/GroupSvgSmall.png" alt="icon" />
           <p class="advantages__p">
             Работают только опытные мастера с чувством стиля. Смотрите наших
             специалистов в разделе Мастера
@@ -171,368 +229,403 @@
             <img
               class="popular__services__img"
               src="./images/popular_services/popular_card.jpg"
-              alt=""
+              alt="popular_card"
             />
             <h6>Маникюр</h6>
             <p>Аппаратный, комбинированный или классический.</p>
-            <button class="btn popular__services__btn">Записаться</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="popular__services__btn btn"
+            >
+              Записаться
+            </button>
           </div>
 
           <div class="popular__services__card">
             <img
               class="popular__services__img"
               src="./images/popular_services/popular_card.jpg"
-              alt=""
+              alt="popular_card"
             />
             <h6>Покрытие гель-лак</h6>
             <p>
               Гель-лак наносится в несколько слоев с использование базы и топа.
               Каждый слой полимеризуется в LED-лампе.
             </p>
-            <button class="btn popular__services__btn">Записаться</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="popular__services__btn btn"
+            >
+              Записаться
+            </button>
           </div>
 
           <div class="popular__services__card">
             <img
               class="popular__services__img"
               src="./images/popular_services/popular_card.jpg"
-              alt=""
+              alt="popular_card"
             />
             <h6>Бразильский маникюр</h6>
             <p>
               Выполняется в одноразовых перчатках наполненных увлажняющим
               лосьоном.
             </p>
-            <button class="btn popular__services__btn">Записаться</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="popular__services__btn btn"
+            >
+              Записаться
+            </button>
           </div>
 
           <div class="popular__services__card">
             <img
               class="popular__services__img"
               src="./images/popular_services/popular_card.jpg"
-              alt=""
+              alt="popular_card"
             />
             <h6>Педикюр</h6>
             <p>Аппаратный, комбинированный или классический.</p>
-            <button class="btn popular__services__btn">Записаться</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="popular__services__btn btn"
+            >
+              Записаться
+            </button>
           </div>
 
           <div class="popular__services__card">
             <img
               class="popular__services__img"
               src="./images/popular_services/popular_card.jpg"
-              alt=""
+              alt="popular_card"
             />
             <h6>Парафинотерапия</h6>
             <p>
               Благодаря этой процедуре увлажнение кожи увеличивается на 80%,
               также выводит токсины и укрепляет суставы.
             </p>
-            <button class="btn popular__services__btn">Записаться</button>
+            <button
+              data-fancybox
+              data-src="#dialog-content"
+              class="popular__services__btn btn"
+            >
+              Записаться
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="price-back">
-    <section class="price-section">
-      <h1 class="price__title">Услуги и цены</h1>
+    <div id="price" class="price-back">
+      <section class="price-section">
+        <h1 class="price__title">Услуги и цены</h1>
 
-      <div class="price__navigation">
+        <div class="price__navigation">
+          <div class="tab">
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'Haircut-and-styling')"
+              id="defaultOpen"
+            >
+              Стрижка и укладка
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Cosmetology')">
+              Косметология
+            </button>
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'Manicure-and-pedicure')"
+            >
+              Маникюр и педикюр
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Makeup')">
+              Макияж
+            </button>
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'Eyebrows-and-eyelashes')"
+            >
+              Брови и ресницы
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Massage')">
+              Массаж
+            </button>
+          </div>
+        </div>
 
-    
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Haircut-and-styling')" id="defaultOpen">Стрижка и укладка</button>
-      <button class="tablinks" onclick="openCity(event, 'Cosmetology')">Косметология</button>
-      <button class="tablinks" onclick="openCity(event, 'Manicure-and-pedicure')">Маникюр и педикюр</button>
-      <button class="tablinks" onclick="openCity(event, 'Makeup')">Макияж</button>
-      <button class="tablinks" onclick="openCity(event, 'Eyebrows-and-eyelashes')">Брови и ресницы</button>
-      <button class="tablinks" onclick="openCity(event, 'Massage')">Массаж</button>
+        <!-- Haircut-and-styling -->
+
+        <div id="Haircut-and-styling" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Женская стрижка</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Стрижка бороды и усов</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Мужская стрижка</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Экспресс укладка</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Детский Стиль</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Укладка дневная</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Креативный Стиль</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">
+                  Прическа вечерняя (свадебная)
+                </h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">3000 ₽</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cosmetology -->
+
+        <div id="Cosmetology" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Консультация косметолога</h4>
+                <p class="price__desc">Первичный прием</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Чистка лица</h4>
+                <p class="price__desc">Женская чистка лица</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Фотоомоложение</h4>
+                <p class="price__desc">Нужна консультация с врачем</p>
+              </div>
+              <p class="price__price">5000 ₽</p>
+            </li>
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Фотоэпиляция</h4>
+                <p class="price__desc">Не для всех типов кожи</p>
+              </div>
+              <p class="price__price">2500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Ультразвуковая чистка лица</h4>
+                <p class="price__desc">Не для всех типов кожи</p>
+              </div>
+              <p class="price__price">1000 ₽</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Manicure-and-pedicure -->
+
+        <div id="Manicure-and-pedicure" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Мужская стрижка</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Экспресс укладка</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Детский Стиль</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Укладка дневная</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Креативный Стиль</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">
+                  Прическа вечерняя (свадебная)
+                </h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">3000 ₽</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Makeup -->
+
+        <div id="Makeup" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Татуаж бровей, губ</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">4000 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Стрижка бороды и усов</h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">1200 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">
+                  Прическа вечерняя (свадебная)
+                </h4>
+                <p class="price__desc">Короткие волосы</p>
+              </div>
+              <p class="price__price">3000 ₽</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Eyebrows and eyelashes -->
+
+        <div id="Eyebrows-and-eyelashes" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Брови</h4>
+                <p class="price__desc">Любой формы</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Брови и Ресницы</h4>
+                <p class="price__desc">Вместе дешевле!</p>
+              </div>
+              <p class="price__price">2500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Ресницы</h4>
+                <p class="price__desc">Любой длинны</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Massage -->
+
+        <div id="Massage" class="tabcontent">
+          <ul class="price__list">
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Спортивный массаж</h4>
+                <p class="price__desc">Подойдет для спортсменов</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">Рассляюляющий</h4>
+                <p class="price__desc">Приятный массаж со смягчающим маслом</p>
+              </div>
+              <p class="price__price">1500 ₽</p>
+            </li>
+
+            <li class="price__item">
+              <div>
+                <h4 class="price__service-name">На все тело</h4>
+                <p class="price__desc">
+                  Начиная с головы и до кончиков пальцев
+                </p>
+              </div>
+              <p class="price__price">3000 ₽</p>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
 
-  </div>
-
-  <!-- Haircut-and-styling -->
-    
-    <div id="Haircut-and-styling" class="tabcontent">
-      
-      <ul class="price__list">
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Женская стрижка</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Стрижка бороды и усов</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Мужская стрижка</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Экспресс укладка</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Детский Стиль</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Укладка дневная</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Креативный Стиль</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">
-              Прическа вечерняя (свадебная)
-            </h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">3000 ₽</p>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Cosmetology -->
-    
-    <div id="Cosmetology" class="tabcontent">
-      <ul class="price__list">
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Консультация косметолога</h4>
-            <p class="price__desc">Первичный прием</p>
-          </div>
-          <p class="price__price">1500 ₽</p>
-        </li>
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Чистка лица</h4>
-            <p class="price__desc">Женская чистка лица</p>
-          </div>
-          <p class="price__price">1500 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Фотоомоложение</h4>
-            <p class="price__desc">Нужна консультация с врачем</p>
-          </div>
-          <p class="price__price">5000 ₽</p>
-        </li>
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Фотоэпиляция</h4>
-            <p class="price__desc">Не для всех типов кожи</p>
-          </div>
-          <p class="price__price">2500 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Ультразвуковая чистка лица</h4>
-            <p class="price__desc">Не для всех типов кожи</p>
-          </div>
-          <p class="price__price">1000 ₽</p>
-        </li>
-
-      </ul>
-    </div>
-
-    <!-- Manicure-and-pedicure -->
-    
-    <div id="Manicure-and-pedicure" class="tabcontent">
-      <ul class="price__list">
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">Мужская стрижка</h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">1200 ₽</p>
-      </li>
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">Экспресс укладка</h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">1200 ₽</p>
-      </li>
-
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">Детский Стиль</h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">1200 ₽</p>
-      </li>
-
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">Укладка дневная</h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">1200 ₽</p>
-      </li>
-
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">Креативный Стиль</h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">1200 ₽</p>
-      </li>
-
-      <li class="price__item">
-        <div>
-          <h4 class="price__service-name">
-            Прическа вечерняя (свадебная)
-          </h4>
-          <p class="price__desc">Короткие волосы</p>
-        </div>
-        <p class="price__price">3000 ₽</p>
-      </li>
-    </ul>
-    </div>
-
-    <!-- Makeup -->
-
-
-    <div id="Makeup" class="tabcontent">
-      
-      <ul class="price__list">
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Татуаж бровей, губ</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">4000 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">Стрижка бороды и усов</h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">1200 ₽</p>
-        </li>
-
-        <li class="price__item">
-          <div>
-            <h4 class="price__service-name">
-              Прическа вечерняя (свадебная)
-            </h4>
-            <p class="price__desc">Короткие волосы</p>
-          </div>
-          <p class="price__price">3000 ₽</p>
-        </li>
-      </ul>
-      </div>
-
-      <!-- Eyebrows and eyelashes -->
-
-      <div id="Eyebrows-and-eyelashes" class="tabcontent">
-      
-        <ul class="price__list">
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">Брови</h4>
-              <p class="price__desc">Любой формы</p>
-            </div>
-            <p class="price__price">1500 ₽</p>
-          </li>
-
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">Брови и Ресницы</h4>
-              <p class="price__desc">Вместе дешевле!</p>
-            </div>
-            <p class="price__price">2500 ₽</p>
-          </li>
-  
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">Ресницы</h4>
-              <p class="price__desc">Любой длинны</p>
-            </div>
-            <p class="price__price">1500 ₽</p>
-          </li>
-  
-
-
-        </ul>
-        </div>
-
-      <!-- Massage -->
-        
-      <div id="Massage" class="tabcontent">
-      
-        <ul class="price__list">
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">Спортивный массаж</h4>
-              <p class="price__desc">Подойдет для спортсменов </p>
-            </div>
-            <p class="price__price">1500 ₽</p>
-          </li>
-  
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">Рассляюляющий</h4>
-              <p class="price__desc">Приятный массаж со смягчающим маслом</p>
-            </div>
-            <p class="price__price">1500 ₽</p>
-          </li>
-  
-          <li class="price__item">
-            <div>
-              <h4 class="price__service-name">
-                На все тело
-              </h4>
-              <p class="price__desc">Начиная с головы и до кончиков пальцев</p>
-            </div>
-            <p class="price__price">3000 ₽</p>
-          </li>
-        </ul>
-        </div>
-
-
-  </section>
-</div>
-
-
-
-    <div class="staff-back">
+    <div id="staff" class="staff-back">
       <section class="staff section">
         <div>
           <h1 class="staff__title">Мастера</h1>
@@ -579,135 +672,248 @@
       </section>
     </div>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="portfolio__header section">
-
         <h2 class="portfolio__title">Наши работы</h2>
 
         <div class="container__arrow-btn">
-        <div class="arrow-btn" id="">
-          <img class="slider-btn btn-prev" src="./images/portfolio/btn2.svg" alt="" width="16px"
-            height="16px" />
+          <div class="arrow-btn button-prev" id="">
+            <img
+              class="slider-btn btn-prev "
+              src="./images/portfolio/btn2.svg"
+              alt="button-prev"
+              width="16px"
+              height="16px"
+            />
+          </div>
+          <div class="arrow-btn" id="">
+            <img
+              class="slider-btn button-next"
+              src="./images/portfolio/btn1.svg"
+              alt="button-next"
+              width="16px"
+              height="16x"
+            />
+          </div>
         </div>
-        <div class="arrow-btn" id="">
-          <img class="slider-btn btn-next" src="./images/portfolio/btn1.svg" alt="" width="16px"
-            height="16x" />
-        </div>
-      </div>
       </div>
 
       <div class="portfolio__container">
 
-        <ul class="portfolio__list" >
+        <div class="swiper">
 
-          <li class="portfolio__item portfolio__item-1">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <li
+            data-fancybox="gallery"
+            data-src="../images/portfolio/1.png"
+            class="portfolio__item portfolio__item-1"
+          >
             <a href="" class="portfolio__link">
               <div class="portfolio-item__container">
-                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="magnifying-glass"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
-                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                  />
                 </svg>
                 <p>Увеличить</p>
               </div>
             </a>
           </li>
+        </div>
 
-          <li class="portfolio__item portfolio__item-2">
+        <div class="swiper-slide">
+          <li
+            data-fancybox="gallery"
+            data-src="../images/portfolio/2.png"
+            class="portfolio__item portfolio__item-2"
+          >
             <a href="" class="portfolio__link">
               <div class="portfolio-item__container">
-                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="magnifying-glass"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
-                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                  />
                 </svg>
                 <p>Увеличить</p>
               </div>
             </a>
           </li>
+        </div>
 
-          <li class="portfolio__item portfolio__item-3">
+        <div class="swiper-slide">
+          <li
+            data-fancybox="gallery"
+            data-src="../images/portfolio/3.png"
+            class="portfolio__item portfolio__item-3"
+          >
             <a href="" class="portfolio__link">
               <div class="portfolio-item__container">
-                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="magnifying-glass"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
-                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                  />
                 </svg>
                 <p>Увеличить</p>
               </div>
             </a>
           </li>
+        </div>
 
-          <li class="portfolio__item portfolio__item-4">
+        <div class="swiper-slide">
+          <li
+            data-fancybox="gallery"
+            data-src="../images/portfolio/4.png"
+            class="portfolio__item portfolio__item-4"
+          >
             <a href="" class="portfolio__link">
               <div class="portfolio-item__container">
-                <svg class="magnifying-glass" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="magnifying-glass"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
-                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z" />
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                  />
                 </svg>
                 <p>Увеличить</p>
               </div>
             </a>
           </li>
+        </div>
 
+        <div class="swiper-slide">
+          <li
+            data-fancybox="gallery"
+            data-src="../images/portfolio/1.png"
+            class="portfolio__item portfolio__item-1"
+          >
+            <a href="" class="portfolio__link">
+              <div class="portfolio-item__container">
+                <svg
+                  class="magnifying-glass"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                  />
+                </svg>
+                <p>Увеличить</p>
+              </div>
+            </a>
+          </li>
+        </div>
+      </div>
+
+      
     </section>
 
     <section class="brands section">
       <h2 class="brands__title">Бренды, которые мы используем в работе</h2>
-                  <ul class="brands__list">
-                    <li class="brands__item">
-                      <img src="./images/brands/1.png" alt="" />
-                    </li>
-                    <li class="brands__item">
-                      <img src="./images/brands/2.png" alt="" />
-                    </li>
-                    <li class="brands__item">
-                      <img src="./images/brands/3.png" alt="" />
-                    </li>
-                    <li class="brands__item">
-                      <img src="./images/brands/4.png" alt="" />
-                    </li>
-                    <li class="brands__item">
-                      <img src="./images/brands/5.png" alt="" />
-                    </li>
-                  </ul>
-          </section>
+      <ul class="brands__list">
+        <li class="brands__item">
+          <img src="./images/brands/1.png" alt="brands-1" />
+        </li>
+        <li class="brands__item">
+          <img src="./images/brands/2.png" alt="brands-2" />
+        </li>
+        <li class="brands__item">
+          <img src="./images/brands/3.png" alt="brands-3" />
+        </li>
+        <li class="brands__item">
+          <img src="./images/brands/4.png" alt="brands-4" />
+        </li>
+        <li class="brands__item">
+          <img src="./images/brands/5.png" alt="brands-5" />
+        </li>
+      </ul>
+    </section>
 
-          <div class="contacts">
-            <section class="contacts__section section">
-              <div class="contatcs__info" >
-                <h2 class="contatcs__info__title">Контакты</h2>
-                <p class="contatcs__info__adress">Томск, проспект Ленина, дом 13</p>
-                <a href="tel:84996861762" class="contatcs__info__number">8 (499) 686-17-62</a>
-                <a href="#" class="contatcs__info__email">info@more-krasoty.ru</a>
-                <p class="contatcs__info__social">Мы в социальных сетях</p>
-                <div class="contatcs__info__list-icon social__icons">
-                  <img src="./images/header/vk.png" alt="">
-                  <img src="./images/header/inst.png" alt="">
-                  <img src="./images/header/yt.png" alt="">
-              </div>
-            </div>
-
-              <form class="form">
-                <div class="form__container">
-                  <h3 class="form__title">Быстрая запись</h3>
-                  <p class="form__info">Наш менеджер перезвонит в течение нескольких минут, уточнит
-                    подробности и согласует время. </p>
-                  <input class="form__input" type="name" placeholder="Ваше имя" />
-                  <input class="form__input" type="tel" placeholder="+7 (___) ___-__-__"/>
-                  <button class="btn form__button">Записаться</button>
-                  <p class="form__desc"> Нажимая на кнопку вы соглашаетесь с
-                    <a href="#">обработкой персональных данных</a></p>
-                </div>
-              </form>
-              
-            </section>
+    <div id="contacts" class="contacts">
+      <section class="contacts__section section">
+        <div class="contatcs__info">
+          <h2 class="contatcs__info__title">Контакты</h2>
+          <p class="contatcs__info__adress">Томск, проспект Ленина, дом 13</p>
+          <a href="tel:84996861762" class="contatcs__info__number"
+            >8 (499) 686-17-62</a
+          >
+          <a href="#" class="contatcs__info__email">info@more-krasoty.ru</a>
+          <p class="contatcs__info__social">Мы в социальных сетях</p>
+          <div class="contatcs__info__list-icon social__icons">
+            <img src="./images/header/vk.png" alt="vk" />
+            <img src="./images/header/inst.png" alt="inst" />
+            <img src="./images/header/yt.png" alt="yt" />
           </div>
-          
+        </div>
 
+        <form class="form" id="form1">
+          <div class="form__container">
+            <h3 class="form__title">Быстрая запись</h3>
+            <p class="form__info">
+              Наш менеджер перезвонит в течение нескольких минут, уточнит
+              подробности и согласует время.
+            </p>
+            <input
+              class="form__input"
+              type="name"
+              id="input1"
+              name="name"
+              placeholder="Ваше имя"
+              value=""
+              required
+            />
 
+            <p class="out"></p>
+            <input
+              class="form__input"
+              type="tel"
+              id="input2"
+              name="phoneNumber"
+              placeholder="+7 (___) ___-__-__"
+              value=""
+              required
+            />
+
+            <button type="submit" id="buttonForm" class="form__button btn">
+              Записаться
+            </button>
+            <p class="form__desc">
+              Нажимая на кнопку вы соглашаетесь с
+              <a href="#">обработкой персональных данных</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
 
     <footer class="footer">
       <div class="footer-block">
@@ -717,24 +923,237 @@
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="" class="navigation__link">Услуги и цены</a>
+            <a href="#price" class="navigation__link">Услуги и цены</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">Мастера</a>
+            <a href="#staff" class="navigation__link">Мастера</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">Наши работы</a>
+            <a href="#portfolio" class="navigation__link">Наши работы</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">О нас</a>
+            <a href="#about" class="navigation__link">О нас</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">Контакты</a>
+            <a href="#contacts" class="navigation__link">Контакты</a>
           </li>
         </ul>
       </nav>
     </footer>
-    
+
+    <!-- оставляю это здесь с надеждой разобраться почему не работают некотоые плагины -->
+
+    <!-- <div>
+      <div class="f-carousel" id="myCarousel">
+
+        <button tabindex="2" title="Previous slide" class="f-button is-prev" data-carousel-prev="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M15 3l-9 9 9 9"></path>
+          </svg></button>
+
+        <div class="f-carousel__slide">
+          <li
+          data-fancybox="gallery"
+          data-src="../images/portfolio/1.png"
+          class="portfolio__item portfolio__item-1"
+        >
+          <a href="" class="portfolio__link">
+            <div class="portfolio-item__container">
+              <svg
+                class="magnifying-glass"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                />
+              </svg>
+              <p>Увеличить</p>
+            </div>
+          </a>
+        </li>
+      </div>
+      
+        <div class="f-carousel__slide"> 
+          <li
+          data-fancybox="gallery"
+          data-src="../images/portfolio/2.png"
+          class="portfolio__item portfolio__item-2"
+        >
+          <a href="" class="portfolio__link">
+            <div class="portfolio-item__container">
+              <svg
+                class="magnifying-glass"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                />
+              </svg>
+              <p>Увеличить</p>
+            </div>
+          </a>
+        </li>
+      </div>
+
+        <div class="f-carousel__slide">
+          <li
+          data-fancybox="gallery"
+          data-src="../images/portfolio/3.png"
+          class="portfolio__item portfolio__item-3"
+        >
+          <a href="" class="portfolio__link">
+            <div class="portfolio-item__container">
+              <svg
+                class="magnifying-glass"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                />
+              </svg>
+              <p>Увеличить</p>
+            </div>
+          </a>
+        </li>
+      
+      </div>
+        <div class="f-carousel__slide"><li
+          data-fancybox="gallery"
+          data-src="../images/portfolio/4.png"
+          class="portfolio__item portfolio__item-4"
+        >
+          <a href="" class="portfolio__link">
+            <div class="portfolio-item__container">
+              <svg
+                class="magnifying-glass"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                />
+              </svg>
+              <p>Увеличить</p>
+            </div>
+          </a>
+        </li>
+      </div>
+
+       <div class="f-carousel__slide">
+          <li
+          data-fancybox="gallery"
+          data-src="../images/portfolio/1.png"
+          class="portfolio__item portfolio__item-1"
+        >
+          <a href="" class="portfolio__link">
+            <div class="portfolio-item__container">
+              <svg
+                class="magnifying-glass"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.8563 46.4657L33.3905 32.4616C36.8251 29.017 38.953 24.2682 38.953 19.0311C38.953 8.5368 30.4162 0 19.9219 0C9.42764 0 0.890839 8.5368 0.890839 19.0311C0.890839 29.5254 9.42764 38.0622 19.9219 38.0622C24.5283 38.0622 28.756 36.4155 32.0511 33.6832L45.5495 47.7218C45.7271 47.9076 45.9646 48 46.2029 48C46.4295 48 46.6551 47.9157 46.831 47.7472C47.1916 47.4001 47.2025 46.8264 46.8563 46.4657ZM19.9219 36.2497C10.4272 36.2497 2.70332 28.5258 2.70332 19.0311C2.70332 9.53638 10.4272 1.81248 19.9219 1.81248C29.4166 1.81248 37.1405 9.53638 37.1405 19.0311C37.1405 28.5258 29.4157 36.2497 19.9219 36.2497Z"
+                />
+              </svg>
+              <p>Увеличить</p>
+            </div>
+          </a>
+        </li>
+      </div>
+        
+
+        </div>
+      </div>
+      </div>
+    </div> -->
+
   </body>
-  <script src="./index.js"></script>
+
+  <script src="./js/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+  <!-- <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https: //code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvseB
+  +OpCW5GVHUNjv9rOmYOIvSIRcf7zGUDTDQM8=" crossorigin="anonymous">
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq
+  +HgcCsk3kj4uSQOR8we020Vj100Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  -->
+
+  <script>
+    // эти функции находятся здесь, так как не получилось настроить в файле js импорт,
+    // пробовал задавать в package.json "type":module и делать все красиво, но что-то идет не так
+    // установил через npm в node_modules @fancyapps отображается и есть доступ, но не импортирует,
+    // были ошибки такие как:
+    // Uncaught SyntaxError: Cannot use import statement outside a module (at index.js:1:1)
+    // Failed to load resource: the server responded with a status of 404 (Not Found)
+    // пробовал файлы называть cjs и mjs и тд, пока не получилось.
+    // попробую еще, когда все остальное доделаю)
+
+    Fancybox.bind("[data-fancybox]", {});
+
+    Fancybox.bind('[data-fancybox="gallery"]', {});
+  </script>
+
+
+
+  <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="slick/slick.min.js"></script> -->
+
+  <!-- <script>
+    $(document).ready(function () {
+      $("#slider").slick({
+        slidesToShow: 4,
+        prevArrow: ".slider-prev",
+        nextArrow: ".slider-next",
+        infinite: false,
+      });
+    });
+  </script> -->
+
+  <script>
+
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: "4",
+      direction: "horizontal",
+      loop: true,
+
+      navigation: {
+        nextEl: ".button-next",
+        prevEl: ".button-prev",
+      },
+
+    });
+  </script>
+  <script src="./js/main.min.js"></script>
 </html>

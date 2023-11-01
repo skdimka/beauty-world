@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 40px auto;
+}
+
+.about__content {
+  display: flex;
+}
+
+.about__main {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+}
+
+.about__title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about__desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 20px;
+}
+
+.about__p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+/* about image */
+.about__image {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin-top: 95px;
+}
+
+.image__salon {
+  position: absolute;
+}
+
+.about__image::after {
+  content: "Короткое видео о нас";
+  background-image: url("/images/about/iconPlay.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 240px;
+  height: 110px;
+  position: absolute;
+  margin-left: 105px;
+  text-align: center;
+  padding-top: 180px;
+  color: #fff;
+  transition: 1s;
+}
+
+.about__image:hover::after {
+  transform: scale(1.05);
+}/*# sourceMappingURL=about.css.map */

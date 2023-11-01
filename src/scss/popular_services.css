@@ -1,0 +1,35 @@
+.popular__title {
+  font-size: 48px;
+  font-weight: 700;
+}
+.popular__services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 30px;
+  gap: 48px 50px;
+  margin-bottom: 70px;
+}
+.popular__services__card {
+  width: 30%;
+}
+.popular__services__card h6 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 15px;
+}
+.popular__services__card p {
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.popular__services__img {
+  border-radius: 8px;
+}
+.popular__services__btn {
+  padding: 10px 20px;
+  margin-top: 15px;
+}/*# sourceMappingURL=popular_services.css.map */

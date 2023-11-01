@@ -1,0 +1,23 @@
+/* navigation */
+.navigation__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* link  */
+.navigation__list {
+  display: flex;
+  list-style: none;
+  gap: 0 28px;
+}
+
+.navigation__link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navigation__item:hover {
+  transform: scale(1.01);
+}/*# sourceMappingURL=navigation.css.map */

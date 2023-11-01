@@ -1,5 +1,4 @@
 /* header */
-
 .header {
   background: url("/images/header/background.png");
 }
@@ -10,18 +9,17 @@
 }
 
 /* logo */
-
 .header__logo {
   font-size: 24px;
   font-weight: 700;
   transition: 1s;
 }
+
 .header__logo:hover {
   transform: scale(1.03);
 }
 
 /* contact */
-
 .header__contact {
   display: flex;
   flex-direction: column;
@@ -40,7 +38,6 @@
 }
 
 /* content */
-
 .header__content {
   display: flex;
   align-items: center;
@@ -55,6 +52,7 @@
   gap: 16px 0;
   transition: 1s;
 }
+
 .header__main:hover {
   transform: scale(1.01);
 }
@@ -70,15 +68,15 @@
 }
 
 /* btn */
-
 .header__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 17px 30px;
   margin-top: 40px;
 }
 
 /* image */
-
 .header__image {
   width: 524px;
   height: 510px;
@@ -108,13 +106,13 @@
 }
 
 /* icons */
-
 .social__icons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px 0;
 }
+
 .social__icons > img:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -174,4 +172,4 @@
   top: 30px;
   right: 30px;
   font-size: 60px !important;
-}
+}/*# sourceMappingURL=header.css.map */
