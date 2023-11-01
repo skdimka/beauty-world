@@ -13,6 +13,7 @@
 @import "./portfolio.css";
 @import "./brands.css";
 @import "./connection.css";
+@import "./modal.scss";
 
 * {
   box-sizing: border-box;
@@ -102,20 +103,4 @@ pop-up {
     cursor: pointer;
     z-index: 100;
   }
-}
-
-.form__select {
-  border: 1px solid #d8d8d8;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  min-height: 44px;
-  padding: 16px 10px;
-}
-
-.form__data {
-  border: 1px solid #d8d8d8;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  min-height: 44px;
-  padding: 16px 10px;
 }
