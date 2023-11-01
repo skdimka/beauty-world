@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="slick/slick.css" />
     <link rel="stylesheet" href="slick/slick-theme.css" />
 
+
     <title>Мир Красоты</title>
   </head>
   <body>
@@ -113,13 +114,10 @@
     </header>
 
     <div id="dialog-content" style="display: none; max-width: 500px">
+      <div class="loader" id="loader"></div>
       <h2>Заполните личные данные для записи</h2>
       <form class="form" id="form2">
       <div class="form__container">
-        <!-- <p class="form__info">
-          Наш менеджер перезвонит в течение нескольких минут, уточнит
-          подробности и согласует время.
-        </p> -->
         <input
           class="form__input"
           type="name"
@@ -127,6 +125,7 @@
           name="name"
           placeholder="Ваше имя"
           value=""
+          required
         />
         <input
           class="form__input"
@@ -135,6 +134,7 @@
           name="phoneNumber"
           placeholder="+7 (___) ___-__-__"
           value=""
+          required
         />
         <select name="selectStaff" class="form__select" id="select__staff">
           <option selected disabled >Выберите мастера</option>
@@ -352,30 +352,30 @@
           <div class="tab">
             <button
               class="tablinks"
-              onclick="openCity(event, 'Haircut-and-styling')"
+              onclick="openTabs(event, 'Haircut-and-styling')"
               id="defaultOpen"
             >
               Стрижка и укладка
             </button>
-            <button class="tablinks" onclick="openCity(event, 'Cosmetology')">
+            <button class="tablinks" onclick="openTabs(event, 'Cosmetology')">
               Косметология
             </button>
             <button
               class="tablinks"
-              onclick="openCity(event, 'Manicure-and-pedicure')"
+              onclick="openTabs(event, 'Manicure-and-pedicure')"
             >
               Маникюр и педикюр
             </button>
-            <button class="tablinks" onclick="openCity(event, 'Makeup')">
+            <button class="tablinks" onclick="openTabs(event, 'Makeup')">
               Макияж
             </button>
             <button
               class="tablinks"
-              onclick="openCity(event, 'Eyebrows-and-eyelashes')"
+              onclick="openTabs(event, 'Eyebrows-and-eyelashes')"
             >
               Брови и ресницы
             </button>
-            <button class="tablinks" onclick="openCity(event, 'Massage')">
+            <button class="tablinks" onclick="openTabs(event, 'Massage')">
               Массаж
             </button>
           </div>
@@ -966,16 +966,15 @@
   </body>
 
   <!-- по не известной причине, функция openCity не определеляется, 
-    если убрать подключение index.js, полагаю потому что не переносится в main, но не пойму почему -->
+    если убрать подключение index.js, хоть и переносится в main, из-за двух подключеных файлов этого форма отправляется дважды-->
     
-  <!-- <script src="./js/index.js"></script> -->
+  <script src="./js/index.js"></script>
   <script src="./js/main.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
 
   <script>
     Fancybox.bind("[data-fancybox]", {});
