@@ -136,6 +136,27 @@
           placeholder="+7 (___) ___-__-__"
           value=""
         />
+        <select class="form__select" name="form__select-staff" id="select__staff">
+          <option selected disabled >Выберите мастера</option>
+          <option value="value1">Краснова Ирина</option>
+          <option value="value2">Калилова Жанна</option>
+          <option value="value3">Киселева Алина</option>
+          <option value="value4">Иванова Елена</option>
+        </select>
+        <select class="form__select" name="form__services" id="select__services">
+          <option selected disabled >Выберите услугу</option>
+          <option value="value1">Стрижка и укладка</option>
+          <option value="value2">Косметология</option>
+          <option value="value3">Маникюр и педикюр</option>
+          <option value="value4">Макияж</option>
+          <option value="value5">Брови и ресницы</option>
+          <option value="value6">Массаж</option>
+        </select>
+
+        <label for="form__data">Выберите дату</label>
+
+        <input type="date" class="form__data" id="form__data" name="form__data" value="2023-11-31" min="2023-11-31" max="2024-01-31" />
+
         <button type="submit" id="buttonForm" class="form__button btn">
           Записаться
         </button>

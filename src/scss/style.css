@@ -96,4 +96,20 @@ pop-up__close {
   font-size: 21px;
   cursor: pointer;
   z-index: 100;
+}
+
+.form__select {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  min-height: 44px;
+  padding: 16px 10px;
+}
+
+.form__data {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  min-height: 44px;
+  padding: 16px 10px;
 }/*# sourceMappingURL=style.css.map */
