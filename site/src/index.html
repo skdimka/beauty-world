@@ -113,71 +113,46 @@
       </div>
     </header>
 
-    <div id="dialog-content" style="display: none; max-width: 500px">
-      <div class="loader" id="loader"></div>
+    <div id="dialog-content" style="display: none; max-width: 600px">
+    
       <h2>Заполните личные данные для записи</h2>
-      <form class="form" id="form2">
-      <div class="form__container">
-        <input
-          class="form__input"
-          type="name"
-          id="input1"
-          name="name"
-          placeholder="Ваше имя"
-          value=""
-          required
-        />
-        <input
-          class="form__input"
-          type="tel"
-          id="input2"
-          name="phoneNumber"
-          placeholder="+7 (___) ___-__-__"
-          value=""
-          required
-        />
-        <select name="selectStaff" class="form__select" id="select__staff">
-          <option selected disabled >Выберите мастера</option>
-          <option value="value1">Краснова Ирина</option>
-          <option value="value2">Калилова Жанна</option>
-          <option value="value3">Киселева Алина</option>
-          <option value="value4">Иванова Елена</option>
-        </select>
-        <select name="selectServices" class="form__select" id="select__services">
-          <option selected disabled >Выберите услугу</option>
-          <option value="value1">Стрижка и укладка</option>
-          <option value="value2">Косметология</option>
-          <option value="value3">Маникюр и педикюр</option>
-          <option value="value4">Макияж</option>
-          <option value="value5">Брови и ресницы</option>
-          <option value="value6">Массаж</option>
-        </select>
+    
+      <form class="form" id="modalForm">
 
-        <label for="form__data" >Выберите дату</label>
+    <label>Ваше имя</label>
+     <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+    
+    <label>Номер телефона</label>
+      <input class="form__input" type="phone" name="phone" placeholder="+7 (___) ___-__-__">
+    
+    <label>Выберите мастера</label>
+     <select name="masterId" class="form__select" id="select__staff">
+      <option value="1">Краснова Ирина</option>
+      <option value="2">Калилова Жанна</option>
+      <option value="3">Киселева Алина</option>
+      <option value="4">Иванова Елена</option>
+      </select>
+    
+      <label>Выберите услугу</label>
+     <select name="serviceId" class="form__select" id="select__services">
+      <option value="1">Стрижка и укладка</option>
+      <option value="2">Косметология</option>
+      <option value="3">Маникюр и педикюр</option>
+      <option value="4">Макияж</option>
+      <option value="5">Брови и ресницы</option>
+      <option value="6">Массаж</option>
+     </select>
+      
+     <label>Дата визита</label>
+     <input class="form__data" name="visitDate" type="date">
+    
+    <button type="button" class="form__button btn" id="modalFormSubmit">Записаться</button>
+</form>
 
-        <input type="date" class="form__data" id="form__data" name="data" value="2023-11-31" min="2023-11-31" max="2024-01-31" />
-
-        <button type="submit" id="buttonForm">
-          Записаться
-        </button>
-        <p class="form__desc">
-          Нажимая на кнопку вы соглашаетесь с
-          <a href="#">обработкой персональных данных</a>
-        </p>
-      </div>
-    </form>
-    </div>
-
-    <div id="dialog-content" style="display: none; max-width: 500px">
-      <h2>Заполните личные данные для записи</h2>
-
-      <div class="form__container">
-        <p class="form__info">
-          Наш менеджер перезвонит в течение нескольких минут, уточнит
-          подробности и согласует время.
-        </p>
-
-      </div>
+  <p class="form__desc">
+    Нажимая на кнопку вы соглашаетесь с
+    <a href="#">обработкой персональных данных</a>
+  </p>
     </div>
 
     <section id="about" class="about section">
@@ -897,43 +872,46 @@
           </div>
         </div>
 
-        <form class="form" id="form1">
+        <!-- <p id="formResult"></p> -->
+
+        <form class="form" id="shortForm">
           <div class="form__container">
             <h3 class="form__title">Быстрая запись</h3>
             <p class="form__info">
               Наш менеджер перезвонит в течение нескольких минут, уточнит
               подробности и согласует время.
             </p>
+
+            <label>Ваше имя</label>
             <input
               class="form__input"
               type="name"
               id="input1"
               name="name"
-              placeholder="Ваше имя"
+              placeholder="Введите имя"
               value=""
               required
             />
-
+            <label>Номер телефона</label>
             <p class="out"></p>
             <input
               class="form__input"
               type="tel"
               id="input2"
-              name="phoneNumber"
+              name="phone"
               placeholder="+7 (___) ___-__-__"
               value=""
               required
             />
 
-            <button type="submit" id="buttonForm" class="form__button btn">
-              Записаться
-            </button>
+            <button type="button" class="form__button btn" id="shortFormSubmit">Записаться</button>
             <p class="form__desc">
               Нажимая на кнопку вы соглашаетесь с
               <a href="#">обработкой персональных данных</a>
             </p>
           </div>
         </form>
+
       </section>
     </div>
 
@@ -961,9 +939,9 @@
           </li>
         </ul>
       </nav>
-    </footer>
+   </footer>
 
-  </body>
+</body>
 
   <!-- по не известной причине, функция openCity не определеляется, 
     если убрать подключение index.js, хоть и переносится в main, из-за двух подключеных файлов этого форма отправляется дважды-->
@@ -996,6 +974,7 @@
 
     });
   </script>
+
   
 
 </html>
