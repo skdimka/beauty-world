@@ -106,7 +106,9 @@ async function sendDataModalForm() {
     if (response.status === 201) {
         console.log("отправлено");
         document.getElementById("modalForm").reset();
-        setTimeout($.fancybox.close(), 3000);// не работает, из-за того что fancybox нормально не подключен, то о чем говорил выше.
+        // setTimeout($.fancybox.close(), 3000);// не работает, из-за того что fancybox нормально не подключен, то о чем говорил выше.
+        // setTimeout(closeModalForm, 3000); можно было бы так, но так как это плагин, работает криво, поэтому надеюсь разобраться с ошибками
+        //пишу алерт, потому то не могу воспользоваться всему возможностями модалки, пробовал устанавливать HystModal, тоже не рабоатет
         alert("Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.");
         return;
     }
@@ -117,3 +119,9 @@ async function sendDataModalForm() {
         return;
     }
 }
+
+// function closeModalForm() {
+//     const dialogContent = document.getElementById("dialog-content");
+//     console.log("должен убрать")
+//     dialogContent.style.display = "none";
+// }
