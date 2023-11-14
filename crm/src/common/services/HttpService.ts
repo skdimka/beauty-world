@@ -7,7 +7,6 @@ export class HttpService {
     private baseApi: string = '';
 
     constructor (baseApiPath: string = '') {
-        // this.baseApi = baseApiPath;
         this.baseApi = `${API_PATH}${baseApiPath}`;
     }
 
