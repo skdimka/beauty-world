@@ -1,43 +1,41 @@
-// import React, { useContext } from 'react';
+import React from 'react';
+import { Outlet, Link, Navigate } from 'react-router-dom';
 import './App.css';
-import BasicTabs from './tabPanel';
-import { StyledEngineProvider } from '@mui/material/styles';
+// import BasicTabs from './tabPanel';
 import AppBar from './AppBar';
-import { AuthForm } from './components/AuthForm';
-// import { AuthData } from './common/interfaces/AuthData';
 import { useAuth } from './context/AuthContext';
-import { useEffect } from 'react';
-import customersApi from './common/api/CustomersApi';
 
 
 function App() {
-  const {isLoggedIn, login, logout } = useAuth();
+  const {isLoggedIn, logout } = useAuth();
 
-  useEffect(()=>{
-    
-  }, []);
-
-  const loadCustomers = () => {customersApi.getAll(); }
-
-  if (!isLoggedIn){
-    return  <AuthForm onLogin={login}/>;
+  if(!isLoggedIn) {
+    return <Navigate to="./login"/>
   }
 
   return (
     <>
-    <header>
-    <AppBar />
-    <button onClick={logout}>Logout</button>
-    </header>
+      <header>
+        <AppBar />
+      <nav>
+        <ul>
+          <li><Link to="/">Заявки</Link></li>
+          <li><Link to="/employees">Сотрудники</Link></li>
+        </ul>
+      </nav>
+
+        <button onClick={logout}>Logout</button>
+      </header>
 
     <main> 
-      <button onClick={loadCustomers}>Load Customers</button>
-    <div className="App">
+      <Outlet/>
+
+      {/*
+       <div className="App">
           <StyledEngineProvider injectFirst>
-      
-    </StyledEngineProvider>
-      <BasicTabs/>
-    </div>
+          </StyledEngineProvider>
+           <BasicTabs/>
+        </div> */}
     </main>
     </>
   );
