@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Outlet, Link, Navigate } from 'react-router-dom';
 import './App.css';
 // import BasicTabs from './tabPanel';
@@ -7,7 +7,11 @@ import { useAuth } from './context/AuthContext';
 
 
 function App() {
-  const {isLoggedIn, logout } = useAuth();
+  const {isLoggedIn, logout, checkAuth } = useAuth();
+
+  useEffect(() => {
+    checkAuth()
+  }, []);
 
   if(!isLoggedIn) {
     return <Navigate to="./login"/>
