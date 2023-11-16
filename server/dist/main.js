@@ -10,7 +10,7 @@ const passport = require("passport");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors({
-        origin: '*',
+        origin: 'http://localhost:3003',
         credentials: true,
     });
     app.setGlobalPrefix(constants_1.API_PREFIX);
