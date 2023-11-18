@@ -6,14 +6,15 @@ import { IOrder } from "../../common/interfaces/IOrder";
 import {Button, ButtonGroup, Box} from '@mui/material/';
 import {Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper} from '@mui/material/';
 
+import moment from "moment";
+
 
 export const OrdersPage = () => {
     const [orders, setOrders] = useState<IOrder[]>([]);
-
+    
     const fetchOrders = () => {
         ordersApi.getAll().then(result => setOrders(result));
     }
-
 
     useEffect(fetchOrders, [])
 
@@ -28,7 +29,7 @@ export const OrdersPage = () => {
             default:
                 return array.sort((a, b) => a.customer.fullName.localeCompare(b.customer.fullName));
         }
-    }
+    };
 
     return (<>
          <Box
@@ -85,10 +86,10 @@ export const OrdersPage = () => {
                     {row.customer.patronymic}
                 </TableCell>
                 <TableCell>
-                    {row.createdDate}
+                    {moment(row.createdDate).locale('ru').format(`LLL`)}
                 </TableCell>
                 <TableCell>
-                    {row.visitDate}
+                    {moment(row.visitDate).locale('ru').format(`LLL`)}
                 </TableCell>
                 <TableCell>
                     {row.status}
