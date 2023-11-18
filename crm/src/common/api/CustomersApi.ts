@@ -10,8 +10,7 @@ class CustomersApi extends HttpService {
     getAll(){
         return this.get('');
     }
-
-}
+} 
 
 const customersApi = new CustomersApi()
  

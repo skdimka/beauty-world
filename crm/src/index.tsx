@@ -6,8 +6,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from './context/AuthContext';
 import LoginPage from './pages/LoginPage/LoginPage';
-import OrdersPage from './pages/OrdersPage/OrdersPage';
 import EmployeesPage from './pages/EmployeesPage/EmployeesPage';
+import { OrdersPage } from './pages/OrdersPage/OrdersPage';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

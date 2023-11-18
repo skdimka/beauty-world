@@ -1,6 +1,7 @@
 import {useRef} from "react";
 import { AuthData } from "../common/interfaces/AuthData";
-import { useInput } from "../hooks/useinput";
+import { useInput } from "../hooks/useInput";
+
 
 interface AuthFormProps{
     onLogin: (authData: AuthData) => void;
