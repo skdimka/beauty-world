@@ -97,7 +97,7 @@ export default function CreateRowModal(props: ICreateRow) {
   return (
     <>
       <Box>
-        <Button onClick={handleOpen}>Добавить запись</Button>
+        <Button onClick={handleOpen}><Typography>Добавить запись</Typography> </Button>
       </Box>
 
       <Modal

@@ -36,9 +36,9 @@ class OrdersApi extends HttpService {
     //     return this.patch(`${id}`, JSON.stringify(dto))
     // }
 
-    // remove(id: number) {
-    //     return this.delete(`/${id}`);
-    // }
+    remove(id: number) {
+        return this.delete(`/${id}`);
+    }
 }
 
 const ordersApi = new OrdersApi();

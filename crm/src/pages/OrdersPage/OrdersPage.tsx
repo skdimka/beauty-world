@@ -7,13 +7,21 @@ import {Button, ButtonGroup, Box} from '@mui/material/';
 import {Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper} from '@mui/material/';
 
 import moment from "moment";
+
 import CreateRowModal from "../../components/CreateRowModal";
+import DeleteRowModal from "../../components/DeleteRowModal";
 
 export const OrdersPage = () => {
     const [orders, setOrders] = useState<IOrder[]>([]);
+    const [currentOrder, setOrder] = useState<IOrder | null>(null);
     
     const fetchOrders = () => {
         ordersApi.getAll().then(result => setOrders(result));
+    }
+
+    const handleDelete = (id: number | undefined) => {
+        if (id === undefined) return;
+        ordersApi.delete(id.toString()).then(() => fetchOrders());
     }
 
     useEffect(fetchOrders, [])
@@ -47,7 +55,7 @@ export const OrdersPage = () => {
              </ButtonGroup>
              <CreateRowModal onApply={fetchOrders}/>
         </Box>
-
+            
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
 
@@ -95,12 +103,21 @@ export const OrdersPage = () => {
                 <TableCell>
                     {row.status}
                 </TableCell>
+                <TableCell>
+                    <DeleteRowModal 
+                            onOrder = {()=>{
+                                setOrder(row);
+                                }}
+                            onAction={() => {
+                                handleDelete(currentOrder?.id);
+                                }} 
+                            onClose={() => 
+                                console.log("close")
+                            } 
+                    />
+                </TableCell>
             </TableRow>
           ))}
-          {/* <CreateRow onApply={fetchOrders} /> */}
-
-          {/* {<CreateRow onApply={fetchOrders}/>} */}
-
         </TableBody>
     </Table>
  </TableContainer>

@@ -64,4 +64,13 @@ export class HttpService {
 
     return response.data;
   }
+
+  async delete(path: string, params?: Params) {
+    const response = await httpClient.delete(
+        `${this.baseApi}/${path}`,
+        { params, headers: this.baseHeaders }
+    );
+
+    return response.data;
+}
 }
