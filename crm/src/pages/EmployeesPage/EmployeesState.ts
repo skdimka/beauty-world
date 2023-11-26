@@ -1,5 +1,6 @@
 import { EmployeeDto } from './../../common/dto/EmployeeDto';
-import { makeAutoObservable } from "mobx" 
+import {makeAutoObservable} from "mobx";
+
 
 class EmployeesState {
     employees: EmployeeDto[] = [];

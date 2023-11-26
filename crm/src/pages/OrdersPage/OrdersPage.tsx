@@ -7,7 +7,7 @@ import {Button, ButtonGroup, Box} from '@mui/material/';
 import {Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper} from '@mui/material/';
 
 import moment from "moment";
-
+import CreateRowModal from "../../components/CreateRowModal";
 
 export const OrdersPage = () => {
     const [orders, setOrders] = useState<IOrder[]>([]);
@@ -45,6 +45,7 @@ export const OrdersPage = () => {
                 <Button onClick={() => setSort(1)}>По статусу</Button>
                 <Button onClick={() => setSort(2)}>По ФИО</Button>
              </ButtonGroup>
+             <CreateRowModal onApply={fetchOrders}/>
         </Box>
 
         <TableContainer component={Paper}>
@@ -96,6 +97,10 @@ export const OrdersPage = () => {
                 </TableCell>
             </TableRow>
           ))}
+          {/* <CreateRow onApply={fetchOrders} /> */}
+
+          {/* {<CreateRow onApply={fetchOrders}/>} */}
+
         </TableBody>
     </Table>
  </TableContainer>
